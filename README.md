@@ -1,8 +1,8 @@
-## dex.cryptomarketscreener.com
+## [dex.cryptomarketscreener.com](https://dex.cryptomarketscreener.com)
 
 Create an AWS S3 and Cloudfront Static Site for the Serum DEX Client UI.
 
-Clone and deploy the UI code.
+Clone and deploy the UI code to [dex.cryptomarketscreener.com](https://dex.cryptomarketscreener.com)
 
 This application is build around the UNIX command line.
 
