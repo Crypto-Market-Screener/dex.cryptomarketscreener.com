@@ -26,3 +26,7 @@ The following setup instructions are configurable to your own domain name via Cl
 
 - [README-DEX.md](README-DEX.md)
 - [README-WALLET.md](README-WALLET.md)
+
+## To Do
+
+Deployment is a manual process, from your workstation or server to AWS - a automated CI/CD pipeline will be developed.
