@@ -1,48 +1,28 @@
 ## [dex.cryptomarketscreener.com](https://dex.cryptomarketscreener.com)
 
-Create an AWS S3 and Cloudfront Static Site for the Serum DEX Client UI.
+## [sollet.cryptomarketscreener.com](https://sollet.cryptomarketscreener.com)
 
-Clone and deploy the UI code to [dex.cryptomarketscreener.com](https://dex.cryptomarketscreener.com)
+## Overview
+
+Create AWS S3 and Cloudfront Static Sites for:
+
+1. The Serum DEX Client UI.
+2. Solana SPL Token Wallet (Sollet)
+
+Clone and deploy the UI code to:
+
+1. [dex.cryptomarketscreener.com](https://dex.cryptomarketscreener.com)
+1. [sollet.cryptomarketscreener.com](https://sollet.cryptomarketscreener.com)
 
 This application is build around the UNIX command line.
 
-## Set the application envrionment first:
+## Requirements
 
-1. dev
-   - `export AWS_SLS_ENV=dev`
-2. prod
-   - `export AWS_SLS_ENV=prod`
+- [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
+- [Node JS](https://nodejs.org/en/download/)
+- [jq](https://stedolan.github.io/jq/)
 
-## Create New Environment/Stage Deployment steps:
+The following setup instructions are configurable to your own domain name via Cloudfront template variables
 
-- `cd devops`
-- `source ./env.sh $AWS_SLS_ENV`
-- `aws cloudformation create-stack --stack-name dex-crypto-market-screener-com-$AWS_SLS_ENV --template-body file://static-site-stack.yaml --parameters ParameterKey=AcmCertificateArn,ParameterValue=$AWS_APP_ACMCERTIFICATEARN ParameterKey=Environment,ParameterValue=$AWS_SLS_ENV`
-
-## Remove Environment
-
-1. Choose environment:
-
-- dev
-  1. `aws s3 rm s3://dev-dex.cryptomarketscreener.com --recursive`
-  2. `aws s3 rm s3://dev-dex.cryptomarketscreener.com.analytics --recursive`
-- prod
-  1. `aws s3 rm s3://dex.cryptomarketscreener.com --recursive`
-  2. `aws s3 rm s3://dex.cryptomarketscreener.com.analytics --recursive`
-
-2. `aws cloudformation delete-stack --stack-name dex-crypto-market-screener-com-$AWS_SLS_ENV`
-
-# Client App Deployment
-
-- `cd tmp`
-- `git clone https://github.com/project-serum/serum-dex-ui.git`
-- `cd serum-dex-ui`
-- `yarn install`
-- `yarn build`
-  - dev
-    1. `aws --profile default s3 sync build/ s3://dev-dex.cryptomarketscreener.com`
-  - prod
-    1. `aws --profile default s3 sync build/ s3://dex.cryptomarketscreener.com`
-- Clear/Invalidate the AWS Cloudfront cache
-- `source ./env-cloudfront.sh $AWS_SLS_ENV`
-- `aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DISTRIBUTION_ID --paths '/*'`
+- [README-DEX.md](README-DEX.md)
+- [README-WALLET.md](README-WALLET.md)
