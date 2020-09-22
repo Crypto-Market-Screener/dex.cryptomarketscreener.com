@@ -9,7 +9,7 @@ Create AWS S3 and Cloudfront Static Sites for:
 1. The Serum DEX Client UI.
 2. Solana SPL Token Wallet (Sollet)
 
-Clone and deploy the UI code to:
+Clone and deploy the UI code to a sub-domain of a domain hosted on AWS Route 53 (examples below):
 
 1. [dex.cryptomarketscreener.com](https://dex.cryptomarketscreener.com)
 1. [sollet.cryptomarketscreener.com](https://sollet.cryptomarketscreener.com)
