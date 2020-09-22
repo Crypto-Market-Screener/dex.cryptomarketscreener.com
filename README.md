@@ -21,6 +21,7 @@ This application is build around the UNIX command line.
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
 - [Node JS](https://nodejs.org/en/download/)
 - [jq](https://stedolan.github.io/jq/)
+- A domain name hosted with AWS Route 53 and with a Certificate enabled in the us-east-1 region (for Cloudfront https)
 
 The following setup instructions are configurable to your own domain name via Cloudfront template variables
 
