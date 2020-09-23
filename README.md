@@ -25,6 +25,18 @@ This application is build around the UNIX command line.
 
 The following setup instructions are configurable to your own domain name via Cloudfront template variables
 
+Clone the code and Serum code submodules
+
+- `git clone --recursive git@github.com:Crypto-Market-Screener/dex.cryptomarketscreener.com.git`
+
+Or clone the repo then clone the submodules after
+
+- `git clone git@github.com:Crypto-Market-Screener/dex.cryptomarketscreener.com.git`
+- `cd dex.cryptomarketscreener.com`
+- `git submodule update --init --recursive`
+
+Follow the README:
+
 - [README-DEX.md](README-DEX.md)
 - [README-WALLET.md](README-WALLET.md)
 
