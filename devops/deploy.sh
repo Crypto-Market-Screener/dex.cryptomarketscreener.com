@@ -6,7 +6,7 @@
 function deploy {
     echo "==> Deployment: $1"
 
-    pushd ../tmp2/$1
+    pushd ../serum/$1
 
     changed=0
 
