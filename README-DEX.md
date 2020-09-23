@@ -35,6 +35,7 @@ This application is build around the UNIX command line.
 # Client App Deployment
 
 - `cd tmp`
+- We only need the master branch for deployment
 - `git clone --branch master --single-branch https://github.com/project-serum/serum-dex-ui.git`
 - `cd serum-dex-ui`
 - `yarn install`
