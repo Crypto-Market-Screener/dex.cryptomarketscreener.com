@@ -35,14 +35,14 @@ This application is build around the UNIX command line.
 # Client App Deployment
 
 - `cd tmp`
-- `git clone https://github.com/project-serum/serum-dex-ui.git`
+- `git clone --branch master --single-branch https://github.com/project-serum/serum-dex-ui.git`
 - `cd serum-dex-ui`
 - `yarn install`
 - `yarn build`
   - dev
-    1. `aws --profile default s3 sync build/ s3://dev-dex.cryptomarketscreener.com`
+    1. `aws --profile default s3 sync --delete build/ s3://dev-dex.cryptomarketscreener.com`
   - prod
-    1. `aws --profile default s3 sync build/ s3://dex.cryptomarketscreener.com`
+    1. `aws --profile default s3 sync --delete build/ s3://dex.cryptomarketscreener.com`
 - Clear/Invalidate the AWS Cloudfront cache
 - `source ./env-cloudfront.sh $AWS_SLS_ENV`
 - `aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DISTRIBUTION_ID --paths '/*'`

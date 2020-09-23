@@ -35,7 +35,8 @@ This application is build around the UNIX command line.
 # Client App Deployment
 
 - `cd tmp`
-- `git clone https://github.com/project-serum/spl-token-wallet.git`
+- We only need the master branch for deployment
+- `git clone --branch master --single-branch https://github.com/project-serum/spl-token-wallet.git`
 - `cd spl-token-wallet`
 - `yarn install`
 - `yarn build`
