@@ -1,8 +1,0 @@
-[submodule "serum/serum-dex-ui"]
-	path = serum/serum-dex-ui
-	url = https://github.com/project-serum/serum-dex-ui.git
-	branch = master
-[submodule "serum/spl-token-wallet"]
-	path = serum/spl-token-wallet
-	url = https://github.com/project-serum/spl-token-wallet.git
-	branch = master
